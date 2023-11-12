@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #252C38;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contents-felx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contents-felx h1 {
+  font-size: 2.9rem;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+.contents-felx h1 span {
+  color: #FF4D80;
+}
+.contents-felx button {
+  width: 15rem;
+  height: 4rem;
+  padding: 0;
+  margin-top: 1.5rem;
+  flex-shrink: 0;
+  background: transparent;
+  border: 0.2rem solid #FFF;
+  transition: background 0.5s ease;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+.contents-felx button:hover {
+  background: rgb(30, 188, 186);
+  transition: background 0.5s ease;
+  border: 0.2rem solid rgb(30, 188, 186);
+}/*# sourceMappingURL=home.css.map */
