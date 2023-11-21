@@ -27,7 +27,7 @@ body {
   justify-content: center;
 }
 .contents-felx h1 {
-  font-size: 2.9rem;
+  font-size: 3.96vw;
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
   color: #fff;
@@ -36,17 +36,17 @@ body {
 }
 .contents-felx h1 span {
   color: #FF4D80;
+  font-weight: bold;
 }
 .contents-felx button {
-  width: 15rem;
-  height: 4rem;
+  width: 21vw;
+  aspect-ratio: 3.6/1;
   padding: 0;
   margin-top: 1.5rem;
-  flex-shrink: 0;
   background: transparent;
   border: 0.2rem solid #FFF;
   transition: background 0.5s ease;
-  font-size: 1.5rem;
+  font-size: 2.08vw;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   color: #fff;
@@ -55,4 +55,12 @@ body {
   background: rgb(30, 188, 186);
   transition: background 0.5s ease;
   border: 0.2rem solid rgb(30, 188, 186);
+}
+
+.square {
+  display: block;
+  position: relative;
+  width: 3px;
+  height: 3px;
+  top: 765px;
 }/*# sourceMappingURL=home.css.map */
