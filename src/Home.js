@@ -3,7 +3,7 @@ import './style/home.css';
 import About from './about';
 import Portfolio from './portfolio';
 import Experiences from './experiences';
-import Contact from './contact';
+import Archiving from './archiving';
 import Navbar from './navBar';
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
     const aboutRef = useRef(null);
     const portfolioRef = useRef(null);
     const experiencesRef = useRef(null);
-    const contactRef = useRef(null);
+    const archivingRef = useRef(null);
 
     const scrollToHome = () => {
         homeRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -25,8 +25,8 @@ function Home() {
     const scrollToexperiences  = () => {
         experiencesRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
-    const scrollTocontact  = () => {
-        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const scrollToarchiving  = () => {
+      archivingRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     const [showNav, setShowNav] = useState(false);
@@ -50,11 +50,11 @@ function Home() {
                   <button onClick={scrollToAbout}>View my work</button>
               </div>
           </section>
-          <Navbar onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} oncontactClick={scrollTocontact} show={showNav}/>
+          <Navbar onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving} show={showNav}/>
           <About ref={aboutRef} />
           <Portfolio ref={portfolioRef}/>
           <Experiences ref={experiencesRef}/>
-          <Contact ref={contactRef}/>
+          <Archiving ref={archivingRef}/>
         </div>
     );
   }

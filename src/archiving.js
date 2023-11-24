@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contact = React.forwardRef((props, ref) => {
+const archiving = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} style={{ height: '100vh', backgroundColor:'#fff'}}>
       <h2>Contact Section</h2>
@@ -9,4 +9,4 @@ const Contact = React.forwardRef((props, ref) => {
   );
 });
 
-export default Contact;
+export default archiving;
