@@ -6,6 +6,15 @@ $text: #6C6C6C;
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@700&display=swap');
 // font-family: 'Kantumruy Pro', sans-serif;
 
+.skillsContents{
+    display: flex;
+    flex-direction: column;
+
+    > *:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+}
+
 .skillBox{
     display: flex;
     flex-direction: row;
@@ -16,42 +25,48 @@ $text: #6C6C6C;
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 8rem;
-    height: 2.8rem;
+    width: 7rem;
+    height: 2.3rem;
     background-color: $aqua;
 
     p{
         margin: 0;
         font-family: 'Kantumruy Pro', sans-serif;
-        font-weight: bold;
-        font-size: 1.25rem;
+        font-weight: 600;
+        font-size: 1.1rem;
         color: #fff;
     }
     
 }
 
+.gageBar{
+    position: relative;
+    height: 2.3rem;
+    width: 25rem;
+}
+
 .gageBackground{
     display: flex;
-    position: relative;
+    position: absolute;
     align-items: center;
     justify-content: right;
-    width: 32.5rem;
-    height: 2.8rem;
+    width: 25rem;
+    height: 2.3rem;
     background-color: $lightgray;
 
     p{
         margin: 0 1rem 0 0;
         font-family: 'Kantumruy Pro', sans-serif;
         font-weight: 400;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         color: $text;
     }
 }
 
 .gage{
     display: block;
-    width: 22.75rem;
-    height: 2.8rem;
+    position: absolute;
+    height: 2.3rem;
     background-color: $deepaqua;
 
 }
