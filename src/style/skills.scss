@@ -1,0 +1,57 @@
+$aqua: #55D0D8;
+$deepaqua: #51B3B9;
+$lightgray: #EBE9E9;
+$text: #6C6C6C;
+
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@700&display=swap');
+// font-family: 'Kantumruy Pro', sans-serif;
+
+.skillBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.skillName{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 2.8rem;
+    background-color: $aqua;
+
+    p{
+        margin: 0;
+        font-family: 'Kantumruy Pro', sans-serif;
+        font-weight: bold;
+        font-size: 1.25rem;
+        color: #fff;
+    }
+    
+}
+
+.gageBackground{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: right;
+    width: 32.5rem;
+    height: 2.8rem;
+    background-color: $lightgray;
+
+    p{
+        margin: 0 1rem 0 0;
+        font-family: 'Kantumruy Pro', sans-serif;
+        font-weight: 400;
+        font-size: 1.25rem;
+        color: $text;
+    }
+}
+
+.gage{
+    display: block;
+    width: 22.75rem;
+    height: 2.8rem;
+    background-color: $deepaqua;
+
+}

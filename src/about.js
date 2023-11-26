@@ -11,7 +11,7 @@ const About = React.forwardRef((props, ref) => {
         </div>
         <div className='aboutContents'>
           <div className='aboutMe'>
-            <img className="myphoto" src="img/myphoto.jpg" />
+            <img className="myphoto" src="img/myphoto.jpg" alt='myphoto'/>
             <h2>HELLO!</h2>
             <p>UI / UX에 가치를 두고 작업하는 주니어 개발자입니다.<br/>
             호기심과 <span>도전 의식</span>이 강해 새로운 기술 습득에 거부감이 없고,<br/>
