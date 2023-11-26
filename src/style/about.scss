@@ -93,3 +93,21 @@ body{
 
 }
 
+.hidden{
+    visibility: hidden;
+}
+
+.lightSpeedInLeft {
+    animation: lightSpeedInLeft;
+    animation-duration: 1s;
+}
+
+.fadeInLeft{
+    animation: fadeInLeft;
+    animation-duration: 1s;
+}
+
+.fadeInRight{
+    animation: fadeInRight;
+    animation-duration: 1s;
+}

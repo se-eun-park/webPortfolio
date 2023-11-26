@@ -31,10 +31,19 @@ function Home() {
     };
 
     const [showNav, setShowNav] = useState(false);
+    const [VisibleHeader, setVisibleHeader] = useState(false);
+    const [VisibleContents, setVisibleContents] = useState(false);
+
 
     const handleScroll = () => {
       const aboutPosition = aboutRef.current.offsetTop;
-      setShowNav(window.scrollY >= aboutPosition-1);
+      setShowNav(window.scrollY >= aboutPosition - 1);
+  
+      const onScreenHeader = window.scrollY  > aboutPosition - 300;
+      setVisibleHeader(onScreenHeader);
+
+      const onScreenContents = window.scrollY  > aboutPosition - 1;
+      setVisibleContents(onScreenContents);
   };
 
     useEffect(() => {
@@ -53,7 +62,7 @@ function Home() {
           </section>
           <NavbarStuck onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving}/>
           <Navbar onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving} show={showNav}/>
-          <About ref={aboutRef} />
+          <About ref={aboutRef} visibleHeader={VisibleHeader} visibleContents={VisibleContents} />
           <Portfolio ref={portfolioRef}/>
           <Experiences ref={experiencesRef}/>
           <Archiving ref={archivingRef}/>
