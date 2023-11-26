@@ -5,6 +5,7 @@ import Portfolio from './portfolio';
 import Experiences from './experiences';
 import Archiving from './archiving';
 import Navbar from './navBar';
+import NavbarStuck from './navBarStuck';
 
 function Home() {
     const homeRef = useRef(null); 
@@ -50,6 +51,7 @@ function Home() {
                   <button onClick={scrollToAbout}>View my work</button>
               </div>
           </section>
+          <NavbarStuck onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving}/>
           <Navbar onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving} show={showNav}/>
           <About ref={aboutRef} />
           <Portfolio ref={portfolioRef}/>
