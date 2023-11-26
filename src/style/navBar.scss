@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap');
 // font-family: 'Kantumruy Pro', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300&display=swap');
+// font-family: 'Kantumruy Pro', sans-serif;
 
 .wrapper{
     display: flex;
@@ -24,12 +26,14 @@
 .contents{
     align-items: center;
     color: #fff;
-    margin-left: 4rem;
-    font-size: 1.25rem;
+    margin-left: 3rem;
+    font-size: 1.1rem;
+    font-weight: 300;
     font-family: 'Kantumruy Pro', sans-serif;
     cursor: pointer;
 }
 
 .contents:hover {
     color: #FF4D80;
+    transition: color 0.5s ease;
 }
