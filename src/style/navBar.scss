@@ -17,7 +17,7 @@
     border-bottom: 0.3rem solid #A5D7CC;
 }
 
-.wrapper.show {
+.wrapper.aboutShow {
     position: fixed;
     top: 0; /* 네비게이션 바를 보이게 함 */
     transition: top 0.5s ease;
@@ -31,6 +31,11 @@
     font-weight: 300;
     font-family: 'Kantumruy Pro', sans-serif;
     cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.contents.aboutFocus, .portfolioFocus, .experiencesFocus, .archivingFocus{
+    color: #FF4D80;
 }
 
 .contents:hover {

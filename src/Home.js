@@ -30,20 +30,36 @@ function Home() {
       archivingRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const [aboutShowNav, setaboutShowNav] = useState(false);
-    const [aboutVisibleHeader, setaboutVisibleHeader] = useState(false);
-    const [aboutVisibleContents, setaboutVisibleContents] = useState(false);
+    const [homeFocus, setHomeFocus] = useState(false);
+    const [aboutFocus, setAboutFocus] = useState(false);
+    const [portfolioFocus, setPortfolioFocus] = useState(false);
+    const [experiencesFocus, setExperiencesFocus] = useState(false);
+    const [archivingFocus, setArchivingFocus] = useState(false);
 
+    const [aboutShowNav, setAboutShowNav] = useState(false);
+    const [aboutVisibleHeader, setAboutVisibleHeader] = useState(false);
+    const [aboutVisibleContents, setAboutVisibleContents] = useState(false);
 
     const handleScroll = () => {
+
       const aboutPosition = aboutRef.current.offsetTop;
-      setaboutShowNav(window.scrollY >= aboutPosition - 1);
-  
+      const portfolioPosition = portfolioRef.current.offsetTop;
+      const experiencesPosition = experiencesRef.current.offsetTop;
+      const archivingPosition = archivingRef.current.offsetTop;
+
+      setHomeFocus(window.scrollY < aboutPosition);
+      setAboutFocus(aboutPosition-1 <= window.scrollY && window.scrollY < portfolioPosition);
+      setPortfolioFocus(portfolioPosition-1 <= window.scrollY && window.scrollY < experiencesPosition);
+      setExperiencesFocus(experiencesPosition-1 <= window.scrollY && window.scrollY < archivingPosition);
+      setArchivingFocus(archivingPosition-1 <= window.scrollY);
+      
+      setAboutShowNav(window.scrollY >= aboutPosition - 1);
+
       const onScreenAboutHeader = window.scrollY  > aboutPosition - 300;
-      setaboutVisibleHeader(onScreenAboutHeader);
+      setAboutVisibleHeader(onScreenAboutHeader);
 
       const onScreenAboutContents = window.scrollY  > aboutPosition - 1;
-      setaboutVisibleContents(onScreenAboutContents);
+      setAboutVisibleContents(onScreenAboutContents);
   };
 
     useEffect(() => {
@@ -60,8 +76,8 @@ function Home() {
                   <button onClick={scrollToAbout}>View my work</button>
               </div>
           </section>
-          <NavbarStuck onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving}/>
-          <Navbar onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving} show={aboutShowNav}/>
+          <NavbarStuck onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving} homeFocus={homeFocus}/>
+          <Navbar onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving} aboutShow={aboutShowNav} aboutFocus={aboutFocus} portfolioFocus={portfolioFocus} experiencesFocus={experiencesFocus} archivingFocus={archivingFocus}/>
           <About ref={aboutRef} aboutVisibleabHeader={aboutVisibleHeader} aboutVisibleContents={aboutVisibleContents} />
           <Portfolio ref={portfolioRef}/>
           <Experiences ref={experiencesRef}/>
