@@ -37,11 +37,18 @@ body {
   background-color: #4A4A4A;
 }
 
+.aboutContents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
 .aboutMe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4rem;
+  margin-right: 7rem;
 }
 .aboutMe img {
   width: 18rem;
