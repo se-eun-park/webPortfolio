@@ -23,6 +23,11 @@ body{
     width: 100%;
     height: 100vh;
     background-color: $smokewhite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header{
@@ -37,7 +42,6 @@ body{
         font-size: 3rem;
     
         margin: 0;
-        padding: 5.5rem 0 0 0;
     
     }
 
@@ -97,17 +101,27 @@ body{
     visibility: hidden;
 }
 
-.lightSpeedInLeft {
-    animation: lightSpeedInLeft;
+.fadeInLeftBigH {
+    animation: fadeInLeftBig;
     animation-duration: 1s;
+}
+
+.fadeInLeftBigL {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+}
+
+.lightSpeedLeft {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
 }
 
 .fadeInLeft{
     animation: fadeInLeft;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 .fadeInRight{
     animation: fadeInRight;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
