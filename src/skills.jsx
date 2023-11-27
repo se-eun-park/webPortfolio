@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState }  from 'react';
 import './style/skills.css';
 
-const Skills = (aboutVisibleContents) => {
+const Skills = ({ startAnimation }) => {
+
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
-        if (aboutVisibleContents) {
-        setTimeout(() => setAnimate(true), 4000);
+        if (startAnimation) {
+            setAnimate(true);
         }
-    }, [aboutVisibleContents]);
+    }, [startAnimation]);
 
     return(
         <div className='skillsContents'>

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './style/about.css';
 import 'animate.css';
 import Skills from './skills';
 
-const About = React.forwardRef(({ aboutVisibleabHeader, aboutVisibleContents }, ref) => {
+const About = React.forwardRef(({ aboutVisibleabHeader, aboutVisibleContents}, ref) => {
+
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+      if (aboutVisibleContents) {
+          setTimeout(() => setStartAnimation(true), 2000);
+      }
+  }, [aboutVisibleContents]);
+
   return (
     <div ref={ref}>
       <div className='aboutBackground'>
@@ -20,7 +29,7 @@ const About = React.forwardRef(({ aboutVisibleabHeader, aboutVisibleContents }, 
             <span>소통과 협업</span>을 중요시합니다.</p>
           </div>
             <div className={`${aboutVisibleContents ? 'fadeInRight' : 'hidden'}`}>
-              <Skills/>
+              <Skills startAnimation={startAnimation}/>
               </div>
         </div>
       </div>

@@ -40,6 +40,7 @@ function Home() {
     const [aboutVisibleHeader, setAboutVisibleHeader] = useState(false);
     const [aboutVisibleContents, setAboutVisibleContents] = useState(false);
 
+
     const handleScroll = () => {
 
       const aboutPosition = aboutRef.current.offsetTop;
@@ -57,9 +58,9 @@ function Home() {
 
       const onScreenAboutHeader = window.scrollY  > aboutPosition - 300;
       setAboutVisibleHeader(onScreenAboutHeader);
-
       const onScreenAboutContents = window.scrollY  > aboutPosition - 1;
       setAboutVisibleContents(onScreenAboutContents);
+
   };
 
     useEffect(() => {
