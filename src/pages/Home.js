@@ -49,9 +49,9 @@ function Home() {
       const archivingPosition = archivingRef.current.offsetTop;
 
       setHomeFocus(window.scrollY < aboutPosition);
-      setAboutFocus(aboutPosition-1 <= window.scrollY && window.scrollY < portfolioPosition);
-      setPortfolioFocus(portfolioPosition-1 <= window.scrollY && window.scrollY < experiencesPosition);
-      setExperiencesFocus(experiencesPosition-1 <= window.scrollY && window.scrollY < archivingPosition);
+      setAboutFocus(aboutPosition-1 <= window.scrollY && window.scrollY < portfolioPosition-1);
+      setPortfolioFocus(portfolioPosition-1 <= window.scrollY && window.scrollY < experiencesPosition-1);
+      setExperiencesFocus(experiencesPosition-1 <= window.scrollY && window.scrollY < archivingPosition-1);
       setArchivingFocus(archivingPosition-1 <= window.scrollY);
       
       setAboutShowNav(window.scrollY >= aboutPosition - 1);
