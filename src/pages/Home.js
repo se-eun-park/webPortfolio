@@ -1,11 +1,11 @@
 import React, {useRef , useState, useEffect} from 'react';
-import './style/home.css';
-import About from './about';
-import Portfolio from './portfolio';
-import Experiences from './experiences';
-import Archiving from './archiving';
-import Navbar from './navBar';
-import NavbarStuck from './navBarStuck';
+import '../style/home.css';
+import About from './about.js';
+import Portfolio from './portfolio.js';
+import Experiences from './experiences.js';
+import Archiving from './archiving.js';
+import Navbar from '../components/navBar.jsx';
+import NavbarStuck from '../components/navBarStuck.jsx';
 
 function Home() {
     const homeRef = useRef(null); 

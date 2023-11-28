@@ -1,5 +1,5 @@
 import React from "react";
-import './style/navBarStuck.css';
+import './navBarStuck.css';
 
 const navBarStuck = ({onHomeClick, onAboutClick, onPortfolioClick, onExperiencesClick, onArchivingClick, homeFocus}) => {
     return (

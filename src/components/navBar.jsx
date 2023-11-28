@@ -1,5 +1,5 @@
 import React from "react";
-import './style/navBar.css';
+import './navBar.css';
 
 const navBar = ({onHomeClick, onAboutClick, onPortfolioClick, onExperiencesClick, onArchivingClick, aboutShow, aboutFocus, portfolioFocus, experiencesFocus, archivingFocus}) => {
     return (

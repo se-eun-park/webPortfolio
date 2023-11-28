@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import './style/about.css';
+import '../style/about.css';
 import 'animate.css';
-import Skills from './skills';
+import Skills from '../components/skills.jsx';
 
 const About = React.forwardRef(({ aboutVisibleabHeader, aboutVisibleContents}, ref) => {
 
