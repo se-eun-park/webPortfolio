@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.portfolioBackground {
+  width: 100%;
+  height: 100vh;
+  background-color: #EBE9E9;
+}/*# sourceMappingURL=portfolio.css.map */
