@@ -29,14 +29,14 @@ body {
   color: #4A4A4A;
   font-family: "Kantumruy Pro", sans-serif;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 3vw;
   margin: 0;
 }
 .header span {
   display: block;
-  margin-top: 0.8rem;
-  width: 5.5rem;
-  height: 0.3rem;
+  margin-top: 0.8vw;
+  width: 5.5vw;
+  height: 0.3vw;
   background-color: #4A4A4A;
 }
 
@@ -54,20 +54,20 @@ body {
   margin-right: 7rem;
 }
 .aboutMe img {
-  width: 18rem;
-  height: 18rem;
+  width: 18vw;
+  height: 18vw;
   border-radius: 10rem;
 }
 .aboutMe h2 {
   color: #6C6C6C;
   font-family: "Kantumruy Pro", sans-serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2vw;
 }
 .aboutMe p {
   font-family: "Noto Sans KR", sans-serif;
   color: #6C6C6C;
-  font-size: 1.25rem;
+  font-size: 1.25vw;
   text-align: center;
   margin: 0;
 }

@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 .skillsContents > *:not(:last-child) {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.4vw;
 }
 
 .skillBox {
@@ -17,8 +17,8 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 7rem;
-  height: 2.2rem;
+  width: 7vw;
+  height: 2.2vw;
   background-color: #55D0D8;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
@@ -27,14 +27,14 @@
   margin: 0;
   font-family: "Kantumruy Pro", sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1vw;
   color: #fff;
 }
 
 .gageBar {
   position: relative;
-  height: 2.2rem;
-  width: 25rem;
+  height: 2.2vw;
+  width: 25vw;
 }
 
 .gageBackground {
@@ -42,24 +42,24 @@
   position: absolute;
   align-items: center;
   justify-content: right;
-  width: 26rem;
-  height: 2.2rem;
+  width: 26vw;
+  height: 2.2vw;
   background-color: #EBE9E9;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
 .gageBackground p {
-  margin: 0 1rem 0 0;
+  margin: 0 1vw 0 0;
   font-family: "Kantumruy Pro", sans-serif;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.1vw;
   color: #6C6C6C;
 }
 
 .gage {
   display: block;
   position: absolute;
-  height: 2.2rem;
+  height: 2.2vw;
   background-color: #51B3B9;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
