@@ -16,7 +16,7 @@ const About = React.forwardRef(({ aboutVisibleabHeader, aboutVisibleContents}, r
   return (
     <div ref={ref}>
       <div className='aboutBackground'>
-        <div className='header'>
+        <div className='aboutHeader'>
           <h1 className={`${aboutVisibleabHeader ? 'fadeInLeftBigH' : 'hidden'}`}>ABOUT</h1>
           <span className={`${aboutVisibleabHeader ? 'fadeInLeftBigL' : 'hidden'}`}></span>
         </div>
