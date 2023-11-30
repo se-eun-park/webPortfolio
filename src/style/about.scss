@@ -30,7 +30,7 @@ body{
     justify-content: center;
 }
 
-.header{
+.aboutHeader{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@ body{
         color: $h1Text;
         font-family: 'Kantumruy Pro', sans-serif;
         font-weight: 600;
-        font-size: 3vw;
+        font-size: 3rem;
     
         margin: 0;
     
@@ -47,10 +47,10 @@ body{
 
     span{
         display: block;
-        margin-top: 0.8vw;
+        margin-top: 0.8rem;
 
-        width: 5.5vw;
-        height: 0.3vw;
+        width: 5.5rem;
+        height: 0.3rem;
         background-color: $h1Text;
     }
 
@@ -67,11 +67,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 7rem;
+    margin-right: 7vw;
 
     img{
-        width: 18vw;
-        height: 18vw;
+        width: 18rem;
+        height: 18rem;
 
         border-radius: 10rem;
     }
@@ -80,13 +80,13 @@ body{
         color: $text;
         font-family: 'Kantumruy Pro', sans-serif;
         font-weight: 600;
-        font-size: 2vw;
+        font-size: 2rem;
     }
 
     p{
         font-family: 'Noto Sans KR', sans-serif;
         color: $text;
-        font-size: 1.25vw;
+        font-size: 1.25rem;
         text-align: center;
         margin: 0;
 

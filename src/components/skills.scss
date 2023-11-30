@@ -11,7 +11,7 @@ $text: #6C6C6C;
     flex-direction: column;
 
     > *:not(:last-child) {
-        margin-bottom: 1.4vw;
+        margin-bottom: 1.4rem;
     }
 }
 
@@ -25,8 +25,8 @@ $text: #6C6C6C;
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 7vw;
-    height: 2.2vw;
+    width: 7rem;
+    height: 2.2rem;
     background-color: $aqua;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
@@ -35,7 +35,7 @@ $text: #6C6C6C;
         margin: 0;
         font-family: 'Kantumruy Pro', sans-serif;
         font-weight: 600;
-        font-size: 1vw;
+        font-size: 1rem;
         color: #fff;
     }
     
@@ -43,7 +43,7 @@ $text: #6C6C6C;
 
 .gageBar{
     position: relative;
-    height: 2.2vw;
+    height: 2.2rem;
     width: 25vw;
 }
 
@@ -53,16 +53,16 @@ $text: #6C6C6C;
     align-items: center;
     justify-content: right;
     width: 26vw;
-    height: 2.2vw;
+    height: 2.2rem;
     background-color: $lightgray;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 
     p{
-        margin: 0 1vw 0 0;
+        margin: 0 1rem 0 0;
         font-family: 'Kantumruy Pro', sans-serif;
         font-weight: 400;
-        font-size: 1.1vw;
+        font-size: 1.1rem;
         color: $text;
     }
 }
@@ -70,7 +70,7 @@ $text: #6C6C6C;
 .gage{
     display: block;
     position: absolute;
-    height: 2.2vw;
+    height: 2.2rem;
     background-color: $deepaqua;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;

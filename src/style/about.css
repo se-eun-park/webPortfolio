@@ -20,23 +20,23 @@ body {
   justify-content: center;
 }
 
-.header {
+.aboutHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.header h1 {
+.aboutHeader h1 {
   color: #4A4A4A;
   font-family: "Kantumruy Pro", sans-serif;
   font-weight: 600;
-  font-size: 3vw;
+  font-size: 3rem;
   margin: 0;
 }
-.header span {
+.aboutHeader span {
   display: block;
-  margin-top: 0.8vw;
-  width: 5.5vw;
-  height: 0.3vw;
+  margin-top: 0.8rem;
+  width: 5.5rem;
+  height: 0.3rem;
   background-color: #4A4A4A;
 }
 
@@ -51,23 +51,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 7rem;
+  margin-right: 7vw;
 }
 .aboutMe img {
-  width: 18vw;
-  height: 18vw;
+  width: 18rem;
+  height: 18rem;
   border-radius: 10rem;
 }
 .aboutMe h2 {
   color: #6C6C6C;
   font-family: "Kantumruy Pro", sans-serif;
   font-weight: 600;
-  font-size: 2vw;
+  font-size: 2rem;
 }
 .aboutMe p {
   font-family: "Noto Sans KR", sans-serif;
   color: #6C6C6C;
-  font-size: 1.25vw;
+  font-size: 1.25rem;
   text-align: center;
   margin: 0;
 }
