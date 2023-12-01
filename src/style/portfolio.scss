@@ -1,4 +1,8 @@
 $lightgray: #EBE9E9;
+$h1Text: #4A4A4A;
+
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@600&display=swap');
+// font-family: 'Kantumruy Pro', sans-serif;
 
 *{
     box-sizing: border-box;
@@ -12,6 +16,50 @@ body{
 
 .portfolioBackground{
     width: 100%;
-    height: 100vh;
     background-color: $lightgray;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolioHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+
+    h1{
+        color: $h1Text;
+        font-family: 'Kantumruy Pro', sans-serif;
+        font-weight: 600;
+        font-size: 3rem;
+    
+        margin: 0;
+    
+    }
+
+    span{
+        display: block;
+        margin-top: 0.8rem;
+
+        width: 5.5rem;
+        height: 0.3rem;
+        background-color: $h1Text;
+    }
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.fadeInLeftBigH {
+    animation: fadeInLeftBig;
+    animation-duration: 1s;
+}
+
+.fadeInLeftBigL {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
 }

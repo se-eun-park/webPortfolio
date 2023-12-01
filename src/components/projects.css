@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400&display=swap");
+.projectsBackground {
+  margin-bottom: 10rem;
+}
+
+.projectsNavContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.projectsNav {
+  width: 47vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projectSkill {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.projectSkill.selected {
+  color: #fff;
+  background-color: #FE2966;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90vw;
+  flex-wrap: wrap;
+}
+
+.projectImg img {
+  width: 30vw;
+  height: 22vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}/*# sourceMappingURL=projects.css.map */

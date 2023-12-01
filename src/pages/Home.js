@@ -40,6 +40,9 @@ function Home() {
     const [aboutVisibleHeader, setAboutVisibleHeader] = useState(false);
     const [aboutVisibleContents, setAboutVisibleContents] = useState(false);
 
+    const [portfolioVisibleHeader, setPortfolioVisibleHeader] = useState(false);
+    const [portfolioVisibleContents, setPortfolioVisibleContents] = useState(false);
+
 
     const handleScroll = () => {
 
@@ -61,6 +64,11 @@ function Home() {
       const onScreenAboutContents = window.scrollY  > aboutPosition - 1;
       setAboutVisibleContents(onScreenAboutContents);
 
+      const onScreenPortfolioHeader = window.scrollY  > portfolioPosition - 300;
+      setPortfolioVisibleHeader(onScreenPortfolioHeader);
+      const onScreenPortfolioContents = window.scrollY  > portfolioPosition - 1;
+      setPortfolioVisibleContents(onScreenPortfolioContents);
+
   };
 
     useEffect(() => {
@@ -80,7 +88,7 @@ function Home() {
           <NavbarStuck onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving} homeFocus={homeFocus}/>
           <Navbar onHomeClick={scrollToHome} onAboutClick={scrollToAbout} onPortfolioClick={scrollToportfolio} onExperiencesClick={scrollToexperiences} onArchivingClick={scrollToarchiving} aboutShow={aboutShowNav} aboutFocus={aboutFocus} portfolioFocus={portfolioFocus} experiencesFocus={experiencesFocus} archivingFocus={archivingFocus}/>
           <About ref={aboutRef} aboutVisibleabHeader={aboutVisibleHeader} aboutVisibleContents={aboutVisibleContents} />
-          <Portfolio ref={portfolioRef}/>
+          <Portfolio ref={portfolioRef} portfolioVisibleHeader={portfolioVisibleHeader} portfolioVisibleContents={portfolioVisibleContents}/>
           <Experiences ref={experiencesRef}/>
           <Archiving ref={archivingRef}/>
         </div>
