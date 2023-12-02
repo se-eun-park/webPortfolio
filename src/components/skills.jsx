@@ -16,10 +16,10 @@ const Skills = ({ startAnimation }) => {
             <div className='skillBox'>
                 <span className='skillName'><p>HTML</p></span>
                 <div className='gageBar'>
-                    <span className='gageBackground'><p>70%</p></span>
+                    <span className='gageBackground'><p>80%</p></span>
                     <span className='gage'                        
                         style={{ 
-                            width: animate ? '70%' : '0%', // 애니메이션 상태에 따라 width 변경
+                            width: animate ? '80%' : '0%', // 애니메이션 상태에 따라 width 변경
                             transitionProperty: 'width',
                             transitionDuration: '0.6s',
                             transitionTimingFunction: 'ease',
@@ -42,12 +42,12 @@ const Skills = ({ startAnimation }) => {
                 
             </div>
             <div className='skillBox'>
-                <span className='skillName'><p>JavaScript</p></span>
+                <span className='skillName'><p>SCSS</p></span>
                 <div className='gageBar'>
-                    <span className='gageBackground'><p>60%</p></span>
+                    <span className='gageBackground'><p>70%</p></span>
                     <span className='gage'                        
                     style={{ 
-                            width: animate ? '60%' : '0%', // 애니메이션 상태에 따라 width 변경
+                            width: animate ? '70%' : '0%', // 애니메이션 상태에 따라 width 변경
                             transitionProperty: 'width',
                             transitionDuration: '0.8s',
                             transitionTimingFunction: 'ease',
@@ -56,7 +56,7 @@ const Skills = ({ startAnimation }) => {
                 
             </div>
             <div className='skillBox'>
-                <span className='skillName'><p>React</p></span>
+                <span className='skillName'><p>JavaScript</p></span>
                 <div className='gageBar'>
                     <span className='gageBackground'><p>60%</p></span>
                     <span className='gage'                        
@@ -70,6 +70,20 @@ const Skills = ({ startAnimation }) => {
                 
             </div>
             <div className='skillBox'>
+                <span className='skillName'><p>React</p></span>
+                <div className='gageBar'>
+                    <span className='gageBackground'><p>60%</p></span>
+                    <span className='gage'                        
+                    style={{ 
+                            width: animate ? '60%' : '0%', // 애니메이션 상태에 따라 width 변경
+                            transitionProperty: 'width',
+                            transitionDuration: '1s',
+                            transitionTimingFunction: 'ease',
+                        }}></span>
+                </div>
+                
+            </div>
+            <div className='skillBox'>
                 <span className='skillName'><p>Node.js</p></span>
                 <div className='gageBar'>
                     <span className='gageBackground'><p>40%</p></span>
@@ -77,7 +91,7 @@ const Skills = ({ startAnimation }) => {
                     style={{ 
                             width: animate ? '40%' : '0%', // 애니메이션 상태에 따라 width 변경
                             transitionProperty: 'width',
-                            transitionDuration: '1s',
+                            transitionDuration: '1.1s',
                             transitionTimingFunction: 'ease',
                         }}></span>
                 </div>
@@ -91,7 +105,7 @@ const Skills = ({ startAnimation }) => {
                     style={{ 
                             width: animate ? '50%' : '0%', // 애니메이션 상태에 따라 width 변경
                             transitionProperty: 'width',
-                            transitionDuration: '1.1s',
+                            transitionDuration: '1.2s',
                             transitionTimingFunction: 'ease',
                         }}></span>
                 </div>
@@ -105,7 +119,7 @@ const Skills = ({ startAnimation }) => {
                     style={{ 
                             width: animate ? '50%' : '0%', // 애니메이션 상태에 따라 width 변경
                             transitionProperty: 'width',
-                            transitionDuration: '1.2s',
+                            transitionDuration: '1.3s',
                             transitionTimingFunction: 'ease',
                         }}></span>
                 </div>
@@ -119,7 +133,7 @@ const Skills = ({ startAnimation }) => {
                     style={{ 
                             width: animate ? '70%' : '0%', // 애니메이션 상태에 따라 width 변경
                             transitionProperty: 'width',
-                            transitionDuration: '1.3s',
+                            transitionDuration: '1.4s',
                             transitionTimingFunction: 'ease',
                         }}></span>
                 </div>

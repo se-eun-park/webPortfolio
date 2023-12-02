@@ -3,6 +3,8 @@ $deepaqua: #51B3B9;
 $lightgray: #EBE9E9;
 $text: #6C6C6C;
 
+$gageHeight: 1.8rem;
+
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@700&display=swap');
 // font-family: 'Kantumruy Pro', sans-serif;
 
@@ -26,7 +28,7 @@ $text: #6C6C6C;
     align-items: center;
     justify-content: center;
     width: 7rem;
-    height: 2.2rem;
+    height: $gageHeight;
     background-color: $aqua;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
@@ -43,7 +45,7 @@ $text: #6C6C6C;
 
 .gageBar{
     position: relative;
-    height: 2.2rem;
+    height: $gageHeight;
     width: 25vw;
 }
 
@@ -53,7 +55,7 @@ $text: #6C6C6C;
     align-items: center;
     justify-content: right;
     width: 26vw;
-    height: 2.2rem;
+    height: $gageHeight;
     background-color: $lightgray;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
@@ -70,7 +72,7 @@ $text: #6C6C6C;
 .gage{
     display: block;
     position: absolute;
-    height: 2.2rem;
+    height: $gageHeight;
     background-color: $deepaqua;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
