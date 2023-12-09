@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@600&display=swap");
 * {
   box-sizing: border-box;
@@ -51,4 +52,21 @@ body {
 .fadeInLeftBigL {
   animation: fadeInLeftBig;
   animation-duration: 2s;
+}
+
+.slideInUp {
+  animation: slideInUp 2s ease forwards;
+  animation-delay: 1s;
+  opacity: 0; /* 애니메이션 시작 전에 투명도를 0으로 설정 */
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=portfolio.css.map */

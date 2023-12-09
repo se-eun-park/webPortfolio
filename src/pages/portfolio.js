@@ -11,7 +11,9 @@ const Portfolio = React.forwardRef(({ portfolioVisibleHeader, portfolioVisibleCo
           <h1 className={`${portfolioVisibleHeader ? 'fadeInLeftBigH' : 'hidden'}`}>PORTFOLIO</h1>
           <span className={`${portfolioVisibleHeader ? 'fadeInLeftBigL' : 'hidden'}`}></span>
         </div>
+        <div className={`${portfolioVisibleContents ? 'slideInUp' : 'hidden'}`}>
         <Projects />
+        </div>
       </div>
     </div>
   );
