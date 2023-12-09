@@ -17,15 +17,34 @@
 }
 
 .projectSkill {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  color: #4A4A4A;
   font-family: "Kantumruy Pro", sans-serif;
   font-weight: 400;
   font-size: 1.3rem;
   margin-bottom: 1rem;
+  transition: color 0.5s ease;
 }
-
+.projectSkill::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.2rem;
+  background-color: #FE2966;
+  transform: translateY(15%) scaleX(0);
+  transition: transform 0.5s ease;
+}
 .projectSkill.selected {
   color: #fff;
-  background-color: #FE2966;
+  transition: color 0.5s ease;
+}
+.projectSkill.selected::after {
+  transform: translateY(15%) scaleX(1);
 }
 
 .projects {
@@ -35,8 +54,7 @@
   width: 90vw;
   flex-wrap: wrap;
 }
-
-.projectImg img {
+.projects img {
   width: 30vw;
   height: 22vw;
   -o-object-fit: cover;

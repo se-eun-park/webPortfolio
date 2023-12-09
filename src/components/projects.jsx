@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './projects.css';
 
 const Projects = () => {
@@ -32,9 +33,20 @@ const Projects = () => {
 
       {/* 필터링된 프로젝트 표시 */}
       <div className='projects'>
-        {filteredProjects.map(project => (
-          <div className='projectImg' key={project.id}><img src={project.imageUrl} alt={project.title} /></div>
-        ))}
+      <AnimatePresence>
+          {filteredProjects.map(project => (
+            <motion.div
+              key={project.id}
+              layout
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img src={project.imageUrl} alt={project.title} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </div>
   );

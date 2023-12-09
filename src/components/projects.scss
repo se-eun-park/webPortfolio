@@ -1,3 +1,5 @@
+$h1Text: #4A4A4A;
+
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400&display=swap');
 // font-family: 'Kantumruy Pro', sans-serif;
 
@@ -19,17 +21,41 @@
 }
 
 .projectSkill{
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+
+    color: $h1Text;
     font-family: 'Kantumruy Pro', sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    
+
+    transition: color 0.5s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2.2rem;
+        background-color: #FE2966;
+        transform:  translateY(15%) scaleX(0);
+        transition: transform 0.5s ease
+    }
+
+    &.selected {
+        color: #fff;
+        transition: color 0.5s ease;
+
+        &::after {
+            transform:  translateY(15%) scaleX(1);
+        }
+    }
 }
 
-.projectSkill.selected {
-    color: #fff;
-    background-color: #FE2966;
-  }
 
 .projects{
     display: flex;
@@ -37,9 +63,7 @@
     justify-content: center;
     width: 90vw;
     flex-wrap: wrap;
-}
 
-.projectImg{
     img{
         width: 30vw;
         height: 22vw;
