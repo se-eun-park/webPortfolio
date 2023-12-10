@@ -1,7 +1,13 @@
 $h1Text: #4A4A4A;
+$nvi : #181D23;
+$smokePink : #DD1850;
 
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@500&display=swap');
 // font-family: 'Kantumruy Pro', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+// font-family: 'Montserrat', sans-serif;
 
 .projectsBackground{
     margin-bottom: 10rem;
@@ -27,7 +33,7 @@ $h1Text: #4A4A4A;
 
     color: $h1Text;
     font-family: 'Kantumruy Pro', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.3rem;
     margin-bottom: 1rem;
 
@@ -70,4 +76,91 @@ $h1Text: #4A4A4A;
         object-fit: cover;
         object-position: center; 
     }
+
+    
 }
+
+.projectCard {
+    position: relative;
+    overflow: hidden;
+  
+    .projectInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: transparent;
+      opacity: 0;
+      transition: opacity 0.4s ease, background-color 0.4s ease;
+
+      .projectTextContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 5vw;
+      }
+
+      .projectTitle {
+        color: $nvi;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.8vw;
+      }
+
+      .projectLanguage{
+        color: $smokePink;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 1.3vw;
+      }
+    }
+  
+    &:hover {
+      .projectInfo {
+        background-color: #EBE9E9;
+        opacity: 1;
+      }
+    }
+  }
+  
+  .learnMoreButton {
+    cursor: pointer;
+    background: transparent;
+    border: 0.2rem solid $smokePink;
+    transition: background 0.5s ease;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+
+    width: 14vw;
+    height: 3.8vw;
+
+    margin-bottom: 5vw;
+
+    &:hover {
+        background: $smokePink;
+        transition: background 0.5s ease;
+        border: 0.2rem solid $smokePink;
+
+        color: #fff;
+    }
+  }
+
+.fadeInDown {
+    animation: fadeInDown;
+    animation-duration: 0.5s;
+}
+
+.fadeInUp {
+    animation: fadeInUp;
+    animation-duration: 0.5s;
+}
+
+// 디테일 페이지

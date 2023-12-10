@@ -1,24 +1,49 @@
 import React, { useState} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import 'animate.css';
 import './projects.css';
 
 const Projects = () => {
   // 현재 선택된 카테고리 상태
   const [selectedCategory, setSelectedCategory] = useState('all');
+  // 마우스 감지
+  const [hoveredProject, setHoveredProject] = useState(null);
 
-  // 프로젝트 목록 (예시 데이터)
+  // 프로젝트 목록
   const projects = [
-    { id: 1, title: 'S2S(SoundToShow)', category: 'javascript', imageUrl: 'img/projects/s2s.svg' },
-    { id: 2, title: 'Face Manager.', category: 'react', imageUrl: 'img/projects/facemanager.svg' },
-    { id: 3, title: 'Facebook-Issues', category: 'react', imageUrl: 'img/projects/facebook.svg' },
-    { id: 4, title: 'My Portfolio', category: 'react', imageUrl: 'img/projects/myportfolio.svg' }
-    // 추가 프로젝트...
+    { id: 1, title: 'S2S(SoundToShow)', category: 'javascript',language: 'Bootstrap / Python', imageUrl: 'img/projects/s2s.svg', 
+    subtitle: '경증 청각장애인을 위한 배리어프리 서비스',
+    description: '이 프로젝트는 블라블라블라오아ㅏㅇ와아아앙아아아아아앙아아아아아아아아아아아아아우우우우dhdhdhdhdhdhdhdhdhdh',
+    images: [] },
+
+    { id: 2, title: 'Face Manager.', category: 'react',language: 'React JS / Python', imageUrl: 'img/projects/facemanager.svg',
+    subtitle: '경증 청각장애인을 위한 배리어프리 서비스',
+    description: '이 프로젝트는 블라블라블라오아ㅏㅇ와아아앙아아아아아앙아아아아아아아아아아아아아우우우우',
+    images: [] },
+
+    { id: 3, title: 'Facebook-Issues', category: 'react',language: 'React JS', imageUrl: 'img/projects/facebook.svg',
+    subtitle: '경증 청각장애인을 위한 배리어프리 서비스',
+    description: '이 프로젝트는 블라블라블라오아ㅏㅇ와아아앙아아아아아앙아아아아아아아아아아아아아우우우우',
+    images: [] },
+
+    { id: 4, title: 'My Portfolio', category: 'react',language: 'React JS', imageUrl: 'img/projects/myportfolio.svg',
+    subtitle: '경증 청각장애인을 위한 배리어프리 서비스',
+    description: '이 프로젝트는 블라블라블라오아ㅏㅇ와아아앙아아아아아앙아아아아아아아아아아아아아우우우우',
+    images: [] }
   ];
 
   // 카테고리에 따라 프로젝트 필터링
   const filteredProjects = projects.filter(project => 
     selectedCategory === 'all' || project.category === selectedCategory
   );
+
+  const [selectedProject, setSelectedProject] = useState(null);
+
+    // 상세보기
+  const learnMore = (id) => {
+    const project = projects.find(p => p.id === id);
+    setSelectedProject(project); 
+  };
 
   return (
     <div className='projectsBackground'>
@@ -42,11 +67,32 @@ const Projects = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.1 } }}
               transition={{ duration: 0.3 }}
+              className='projectCard'
+              onMouseEnter={() => setHoveredProject(project.id)} // 마우스 오버 상태 설정
+              onMouseLeave={() => setHoveredProject(null)}     // 마우스 아웃 상태 설정
             >
               <img src={project.imageUrl} alt={project.title} />
+              <div className='projectInfo'>
+                <div className={`projectTextContainer ${hoveredProject === project.id ? 'fadeInDown' : ''}`}>
+                  <div className='projectTitle'>{project.title}</div>
+                  <div className='projectLanguage'>{project.language}</div>
+                </div>
+                <button className={`learnMoreButton ${hoveredProject === project.id ? 'fadeInUp' : ''}`} onClick={() => learnMore(project.id)}>LEARN MORE</button>
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>
+        {selectedProject && (
+          <div className='projectDetails'>
+            <span className='projectDetailsBackground'></span>
+            <h2 className='projectDetailsTitle'>{selectedProject.title}</h2>
+            <p className='projectDetailsSubtitle'>{selectedProject.subtitle}</p>
+            <p className='projectDetailsDescription'>{selectedProject.description}</p>
+            {/* {selectedProject.images.map((image, index) => (
+              <img key={index} src={image} alt={`Project Image ${index + 1}`} />
+            ))} */}
+          </div>
+        )}
       </div>
     </div>
   );
